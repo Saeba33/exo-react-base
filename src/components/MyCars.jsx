@@ -13,7 +13,7 @@ class MyCars extends Component {
 	getAge = year => {
 		const now = new Date().getFullYear();
 		const age = now - year;
-		const frenchYearStr = age === 1 ? "an" : age > 1 ? "ans" : "";
+		const frenchYearStr = age > 1 ? "ans" : "an";
 		return `${age} ${frenchYearStr}`;
 	}
 
