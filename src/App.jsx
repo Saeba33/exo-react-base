@@ -1,43 +1,20 @@
-import { Component } from "react";
-import "./App.css";
-import MyCars from "./components/MyCars";
+import { Component } from 'react';
+import Mycars from './components/MyCars';
+import './App.css';
 
 class App extends Component {
-	state = {
-		title: "Mon catalogue de voitures",
-		headerStyle: "text-green-600 text-2xl font-bold mb-10 cursor-pointer",
-	};
 
-	changeTitle = () => {
-		this.setState({ title: "J'aime les brocolis" });
-	};
+  state = {
+    titre: 'Mon Catalogue Voitures'
+  }
 
-	changeTitleByParam = (newTitle) => {
-		this.setState({ title: newTitle });
-	};
-
-	changeTitleByBind = (param) => {
-		this.setState({ title: param });
-	};
-
-	changeTitleByInput = (event) => {
-		this.setState({ title: event.target.value });
-	};
-
-	render() {
-		return (
-			<div>
-				<MyCars
-					title={this.state.title}
-					headerStyle={this.state.headerStyle}
-					changeTitle={this.changeTitle}
-					changeTitleByParam={this.changeTitleByParam}
-					changeTitleByBind={this.changeTitleByBind}
-					changeTitleByInput={this.changeTitleByInput}
-				/>
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div className='App'>
+        <Mycars title={this.state.titre} />
+      </div>
+    )
+  }
 }
 
 export default App;

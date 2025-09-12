@@ -1,19 +1,20 @@
-import Wrapper from "./Wrapper";
-
-const Cars = (carsData) => {
-	const hasData = Object.values(carsData).some(
-		(value) => value != null && value !== ""
-	);
-
-	if (!hasData) return null;
-
+const Car = ({ name, year, age, color }) => {
+	const colorInfo = color ? <p>Couleur : {color}</p> : <p>Couleur : "Néant"</p>;
 	return (
-		<Wrapper>
-			{carsData.name && <p>Marque : {carsData.name}</p>}
-			{carsData.color && <p>Couleur : {carsData.color}</p>}
-			{carsData.year && <p>Année de sortie : {carsData.year}</p>}
-		</Wrapper>
+		<div
+			style={{
+				backgroundColor: "orange",
+				width: "400px",
+				padding: "10px",
+				margin: "5px auto",
+			}}
+		>
+			<p>Marque : {name}</p>
+			<p>Anéee : {year}</p>
+			<p>Âge du véhicule : {age}</p>
+			{colorInfo}
+		</div>
 	);
 };
 
-export default Cars;
+export default Car;
