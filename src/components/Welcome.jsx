@@ -23,7 +23,7 @@ export const Welcome = () => {
 			<button
 				className="bg-green-600 rounded p-1 cursor-pointer"
 				onClick={() => console.log("Bonne nuit")}
-			> 
+			>
 				Dire Bonne Nuit
 			</button>
 		</div>
