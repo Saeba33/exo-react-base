@@ -7,24 +7,24 @@ export const Welcome = () => {
 	};
 
 	return (
-		<div className="flex gap-2">
+		<div className="flex items-center justify-center gap-2 my-4">
 			<button
 				className="bg-green-600 rounded p-1 cursor-pointer"
 				onClick={bonjour}
 			>
-				Invoquer une fonction
+				Dirre Bonjour
 			</button>
 			<button
 				className="bg-green-600 rounded p-1 cursor-pointer"
 				onClick={() => bonsoir("Bonsoir")}
 			>
-				Invouer une fonction avec arg "Bonsoir"
+				Dire Bonsoir
 			</button>
 			<button
 				className="bg-green-600 rounded p-1 cursor-pointer"
 				onClick={() => console.log("Bonne nuit")}
-			>
-				Clg sur le bouton
+			> 
+				Dire Bonne Nuit
 			</button>
 		</div>
 	);
