@@ -1,5 +1,5 @@
-import { Component } from 'react';
-import Toto from './Toto';
+import { Component } from "react";
+import Toto from "./Toto";
 
 class Maman extends Component {
 	state = {
