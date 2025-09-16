@@ -1,39 +1,33 @@
-import { Component } from "react";
-import Enfant from "./Enfant";
+import { Component } from 'react';
+import Toto from './Toto';
 
 class Maman extends Component {
 	state = {
 		messageMaman: null,
-		messageEnfant: null,
+		messageToto: null,
+		disabled: true,
 	};
 
-	ordreMaman = () => {
-		this.setState({ messageMaman: "Mange des brocolis !" });
-	};
-
-	reponseEnfant = () => {
-		this.setState({ messageEnfant: "T'es plus ma copine !" });
-	};
+	// Compléter le code de la méthode ordreMaman.
+	ordreMaman = (msg) => this.setState({ messageMaman: msg, disabled: false });
+	reponseToto = (msg) => this.setState({ messageToto: msg });
 
 	render() {
 		return (
 			<div>
-				<div className="flex gap-2 items-center justify-center mb-2">
-					<h1>Maman : </h1>
-					<button
-						className="rounded cursor-pointer p-1 bg-white text-black"
-						onClick={this.ordreMaman}
-					>
-						Ordre de la maman
-					</button>
-				</div>
-				<p className="mb-6 text-red-600">{this.state.messageMaman}</p>
+				<h1>Maman</h1>
+				<button onClick={() => this.ordreMaman("Va ranger ta chambre")}>
+					Order de la mère
+				</button>
+
+				<p>{this.state.messageMaman}</p>
 
 				<hr />
-				<Enfant
-					name="Sacha"
+
+				<Toto
+					name="Toto"
+					reponseTotoProps={this.reponseToto}
 					leState={this.state}
-					reponseEnfant={this.reponseEnfant}
 				/>
 			</div>
 		);
