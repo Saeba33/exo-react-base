@@ -1,12 +1,11 @@
 import "./App.css";
-// import Car from "./components/Car.jsx";
-import Form from "./components/Form.jsx";
+import Parent from "./components/Parent";
 
 const App = () => {
 	return (
-		<div>
-			<h1>Coucou</h1>
-			<Form/>
+		<div className="bg-slate-900 h-screen w-full p-10 text-white">
+			<h1>Exercice 7 :</h1>
+			<Parent />
 		</div>
 	);
 };

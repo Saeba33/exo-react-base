@@ -1,0 +1,14 @@
+import "./App.css";
+// import Car from "./components/Car.jsx";
+import Form from "./Form.jsx";
+
+const App = () => {
+	return (
+		<div>
+			<h1>Coucou</h1>
+			<Form head={true} />
+		</div>
+	);
+};
+
+export default App;
